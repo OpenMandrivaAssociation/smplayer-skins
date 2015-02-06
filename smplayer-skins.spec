@@ -1,6 +1,6 @@
 Name:		smplayer-skins
 Version:	20121029
-Release:	2
+Release:	3
 Summary:	Skins for SMPlayer
 # Actually, various
 License:	GPLv2
