@@ -1,12 +1,12 @@
 Name:		smplayer-skins
-Version:	20121029
-Release:	2
+Version:	15.2.0
+Release:	0.1
 Summary:	Skins for SMPlayer
 # Actually, various
 License:	GPLv2
 Group:		Video
 URL:		http://smplayer.sourceforge.net/
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/smplayer/%{name}-%{version}.tar.bz2
 Requires:	smplayer >= 0.8.2
 BuildArch:	noarch
 
@@ -27,7 +27,10 @@ the Qt toolkit, so it's multi-platform.
 # nothing
 
 %install
-%makeinstall_std PREFIX=%{_prefix}
+#%makeinstall_std DESTDIR=%{buildroot} PREFIX=%{_prefix}
+
+mkdir -p %{buildroot}%{_datadir}/smplayer/themes
+cp -a themes/* %{buildroot}%{_datadir}/smplayer/themes
 
 %files
 %doc README.txt Changelog COPYING*.txt
