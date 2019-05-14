@@ -1,6 +1,6 @@
 Name:		smplayer-skins
 Version:	15.2.0
-Release:	2
+Release:	4
 Summary:	Skins for SMPlayer
 # Actually, various
 License:	GPLv2
@@ -9,6 +9,7 @@ URL:		http://smplayer.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/smplayer/%{name}-%{version}.tar.bz2
 Requires:	smplayer >= 0.8.2
 BuildArch:	noarch
+BuildRequires:	cmake(Qt5Core)
 
 %description
 This package provides skin themes for SMPlayer.
@@ -21,10 +22,11 @@ at the same point and with the same settings. smplayer is developed with
 the Qt toolkit, so it's multi-platform.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-# nothing
+export PATH=%{_libdir}/qt5/bin:$PATH
+%make
 
 %install
 #%makeinstall_std DESTDIR=%{buildroot} PREFIX=%{_prefix}
