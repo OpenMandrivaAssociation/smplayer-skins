@@ -1,6 +1,6 @@
 Name:		smplayer-skins
-Version:	15.2.0
-Release:	4
+Version:	20.11.0
+Release:	1
 Summary:	Skins for SMPlayer
 # Actually, various
 License:	GPLv2
@@ -26,10 +26,10 @@ the Qt toolkit, so it's multi-platform.
 
 %build
 export PATH=%{_libdir}/qt5/bin:$PATH
-%make
+%make_build
 
 %install
-#%makeinstall_std DESTDIR=%{buildroot} PREFIX=%{_prefix}
+#%make_install DESTDIR=%{buildroot} PREFIX=%{_prefix}
 
 mkdir -p %{buildroot}%{_datadir}/smplayer/themes
 cp -a themes/* %{buildroot}%{_datadir}/smplayer/themes
