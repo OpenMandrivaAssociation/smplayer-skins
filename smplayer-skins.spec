@@ -5,7 +5,7 @@ Summary:	Skins for SMPlayer
 # Actually, various
 License:	GPLv2
 Group:		Video
-URL:		http://smplayer.sourceforge.net/
+URL:		https://smplayer.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/smplayer/%{name}-%{version}.tar.bz2
 Requires:	smplayer >= 0.8.2
 BuildArch:	noarch
